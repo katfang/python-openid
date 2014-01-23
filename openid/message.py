@@ -490,7 +490,7 @@ class Message(object):
                                self.args)
 
     def __eq__(self, other):
-        return self.args == other.args
+        return hasattr(other, 'args') and self.args == other.args
 
 
     def __ne__(self, other):
